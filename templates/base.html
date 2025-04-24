@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>{% block title %}My Site{% endblock %}</title>
+  <style>
+    ul { list-style: none; padding-left: 20px; }
+    a.active { font-weight: bold; color: red; }
+  </style>
+</head>
+<body>
+  <header>
+    {% load menu_tags %}
+    <nav>
+      {% draw_menu 'main_menu' %}
+    </nav>
+  </header>
+
+  <main>
+    {% block content %}{% endblock %}
+  </main>
+</body>
+</html>
